@@ -1,0 +1,18 @@
+name: Test Nimbus Judge Pull Request
+run-name: ${{ github.actor }} is running a test for a new feature for Nimbus Judge
+on: [pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the code
+      - name: Checkout
+        uses: actions/checkout@v4
+      # Set up inviroment
+      - name: Install C Compiler and BATS
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential bats
+      # Build the application
+      # Create test cases
+      # For each test case, run 4 Judge scenarios:
