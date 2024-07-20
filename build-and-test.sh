@@ -231,7 +231,7 @@ function run-testinput()
 }
 
 JOBSCOUNT=0
-ALLOWPARALLELTEST="y"
+ALLOWPARALLELTEST="n"
 
 NPROC=$(nproc)
 [[ "$ALLOWPARALLELTEST" == "n" ]] && NPROC=1 && LOG " - Parallel Test not allowed in this problem"
